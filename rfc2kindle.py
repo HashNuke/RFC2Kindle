@@ -10,7 +10,7 @@ Description:
 import sys, logging, getopt, os
 import re
 
-default_font = '/usr/share/cups/fonts/Courier'
+default_font = '/System/Library/Fonts/Courier.dfont'
 font = default_font
 
 def usage():
@@ -212,7 +212,7 @@ def main():
     output.close()
 
     ''' generate and clear intermedia '''
-    os.system("./kindlegen %s" % middle_file)
+    os.system("kindlegen %s" % middle_file)
     os.system("rm *.gif *.html")
 
 if __name__ == "__main__":
